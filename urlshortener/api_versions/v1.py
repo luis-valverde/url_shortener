@@ -1,14 +1,12 @@
 """ Contain all APIs routing for version 1 (/api/v1/) """
 
-from django.urls import path, include
+from django.urls import path
 
-from rest_framework.routers import DefaultRouter
+from url.views import UrlAPIView
 
 
 app_name = "api_v1"
 
-router = DefaultRouter()
-
 urlpatterns = [
-    path('', include(router.urls)),
+    path("url_shortener/", UrlAPIView.as_view()),
 ]

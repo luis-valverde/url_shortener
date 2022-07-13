@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
+import string
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
+    'url.apps.UrlConfig'
 ]
 
 MIDDLEWARE = [
@@ -171,3 +173,9 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
+
+# URL shortener configuration
+URL_PROTOCOL = "https"
+URL_DOMAIN = "tier.app"
+URL_MAX_LENGTH = 7
+URL_CHARACTERS_TO_USE = string.ascii_uppercase + string.digits
