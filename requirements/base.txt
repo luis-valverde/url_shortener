@@ -1,0 +1,9 @@
+# Django
+# ------------------------------------------------------------------------------
+django==4.0.5 # https://pypi.org/project/Django/
+djangorestframework==3.13.1  # https://pypi.org/project/djangorestframework/
+djangorestframework_simplejwt==5.2.0 # https://pypi.org/project/djangorestframework-simplejwt/
+
+# OpenAPI Schema
+pyyaml==6.0 # https://pypi.org/project/PyYAML/
+uritemplate==4.1.1 # https://pypi.org/project/uritemplate/

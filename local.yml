@@ -1,0 +1,17 @@
+version: '3'
+
+volumes:
+  urlshortener_server_database: {}
+
+services:
+  urlshortener_server:
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    image: urlshortener_local_django
+    container_name: urlshortener_server
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    command: /start
