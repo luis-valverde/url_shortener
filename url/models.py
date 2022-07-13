@@ -43,14 +43,15 @@ class Url(models.Model):
         :return:
         """
 
-        short_url_exists = True
-        generated_short_url = ""
+        if not self.short_url:
+            short_url_exists = True
+            generated_short_url = ""
 
-        # Execute until an unique short URL is generated
-        while short_url_exists:
-            generated_short_url = self.create_short_url()
-            short_url_exists = Url.objects.filter(short_url=generated_short_url).exists()
+            # Execute until an unique short URL is generated
+            while short_url_exists:
+                generated_short_url = self.create_short_url()
+                short_url_exists = Url.objects.filter(short_url=generated_short_url).exists()
 
-        self.short_url = generated_short_url
+            self.short_url = generated_short_url
 
         super().save(*args, **kwargs)
