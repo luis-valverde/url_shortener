@@ -7,3 +7,4 @@ djangorestframework_simplejwt==5.2.0 # https://pypi.org/project/djangorestframew
 # OpenAPI Schema
 pyyaml==6.0 # https://pypi.org/project/PyYAML/
 uritemplate==4.1.1 # https://pypi.org/project/uritemplate/
+sqlparse>=0.5.0 # not directly required, pinned by Snyk to avoid a vulnerability
