@@ -3,3 +3,4 @@
 # Code Quality
 pylint-django==2.5.3 # https://pypi.org/project/pylint-django/
 pytest-django==4.5.2 # https://pypi.org/project/pytest-django/
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
